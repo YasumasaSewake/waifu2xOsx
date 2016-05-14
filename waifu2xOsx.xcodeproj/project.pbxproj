@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		620769481CE1CAC40008560B /* libopencv_imgproc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 620769441CE1CAC40008560B /* libopencv_imgproc.dylib */; };
+		620769491CE1CAC40008560B /* libopencv_imgcodecs.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 620769451CE1CAC40008560B /* libopencv_imgcodecs.dylib */; };
+		6207694A1CE1CAC40008560B /* libopencv_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 620769461CE1CAC40008560B /* libopencv_core.dylib */; };
+		6207694B1CE1CAC40008560B /* libopencv_highgui.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 620769471CE1CAC40008560B /* libopencv_highgui.dylib */; };
+		620769571CE1CC070008560B /* convertRoutine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6207694E1CE1CC070008560B /* convertRoutine.cpp */; };
+		620769581CE1CC070008560B /* filterGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 620769501CE1CC070008560B /* filterGL.cpp */; };
+		6207695A1CE1CC070008560B /* modelHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 620769531CE1CC070008560B /* modelHandler.cpp */; };
+		6207695B1CE1CC070008560B /* modelHandlerFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 620769551CE1CC070008560B /* modelHandlerFilter.cpp */; };
+		6207695C1CE1CC070008560B /* modelHandlerFilterGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 620769561CE1CC070008560B /* modelHandlerFilterGL.cpp */; };
+		620769851CE1CD310008560B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6207697D1CE1CD310008560B /* AppDelegate.swift */; };
+		620769891CE1CD310008560B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620769831CE1CD310008560B /* ViewController.swift */; };
+		620769941CE1CE910008560B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6207698D1CE1CE1B0008560B /* Assets.xcassets */; };
+		620769951CE1CE910008560B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6207698E1CE1CE1B0008560B /* Main.storyboard */; };
+		620769961CE1CE910008560B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 620769901CE1CE1B0008560B /* Info.plist */; };
+		621A74E81CE6F25D00D6E027 /* MainScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621A74E71CE6F25D00D6E027 /* MainScrollView.swift */; };
+		621A74EA1CE6FD5400D6E027 /* x1ImageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621A74E91CE6FD5400D6E027 /* x1ImageLayer.swift */; };
+		621A74EC1CE701C100D6E027 /* x2ImageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621A74EB1CE701C100D6E027 /* x2ImageLayer.swift */; };
+		623FA3371CE1E94D00744291 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 623FA3361CE1E94D00744291 /* main.cpp */; };
+		623FA3401CE1EF4A00744291 /* BridgingConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 623FA33F1CE1EF4A00744291 /* BridgingConverter.mm */; };
+		623FA34C1CE1F77600744291 /* noise1_model.bin in Resources */ = {isa = PBXBuildFile; fileRef = 623FA3421CE1F77600744291 /* noise1_model.bin */; };
+		623FA34D1CE1F77600744291 /* noise2_model.bin in Resources */ = {isa = PBXBuildFile; fileRef = 623FA3431CE1F77600744291 /* noise2_model.bin */; };
+		623FA34E1CE1F77600744291 /* scale2.0x_model.bin in Resources */ = {isa = PBXBuildFile; fileRef = 623FA3441CE1F77600744291 /* scale2.0x_model.bin */; };
+		623FA34F1CE1F77600744291 /* convolve_fs.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 623FA3461CE1F77600744291 /* convolve_fs.glsl */; };
+		623FA3501CE1F77600744291 /* convolve_vs.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 623FA3471CE1F77600744291 /* convolve_vs.glsl */; };
+		623FA3511CE1F77600744291 /* leaky_relu_fs.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 623FA3481CE1F77600744291 /* leaky_relu_fs.glsl */; };
+		623FA3521CE1F77600744291 /* leaky_relu_vs.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 623FA3491CE1F77600744291 /* leaky_relu_vs.glsl */; };
+		623FA3531CE1F77600744291 /* waifu2x_fs.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 623FA34A1CE1F77600744291 /* waifu2x_fs.glsl */; };
+		623FA3541CE1F77600744291 /* waifu2x_vs.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 623FA34B1CE1F77600744291 /* waifu2x_vs.glsl */; };
+		62CBF7461CE1C909006BE257 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CBF7451CE1C909006BE257 /* IOKit.framework */; };
+		62CBF7481CE1C911006BE257 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CBF7471CE1C911006BE257 /* Cocoa.framework */; };
+		62CBF74A1CE1C919006BE257 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CBF7491CE1C919006BE257 /* ApplicationServices.framework */; };
+		62CBF74C1CE1C923006BE257 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CBF74B1CE1C923006BE257 /* CoreVideo.framework */; };
+		62CBF74E1CE1C92C006BE257 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CBF74D1CE1C92C006BE257 /* CoreFoundation.framework */; };
+		62CBF7501CE1C935006BE257 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CBF74F1CE1C935006BE257 /* CoreGraphics.framework */; };
+		62CBF7521CE1C93F006BE257 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CBF7511CE1C93F006BE257 /* OpenGL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		620769441CE1CAC40008560B /* libopencv_imgproc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.dylib; path = ../../../../../usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_imgproc.dylib; sourceTree = "<group>"; };
+		620769451CE1CAC40008560B /* libopencv_imgcodecs.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgcodecs.dylib; path = ../../../../../usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_imgcodecs.dylib; sourceTree = "<group>"; };
+		620769461CE1CAC40008560B /* libopencv_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.dylib; path = ../../../../../usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_core.dylib; sourceTree = "<group>"; };
+		620769471CE1CAC40008560B /* libopencv_highgui.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.dylib; path = ../../../../../usr/local/Cellar/opencv3/3.1.0_3/lib/libopencv_highgui.dylib; sourceTree = "<group>"; };
+		6207694E1CE1CC070008560B /* convertRoutine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = convertRoutine.cpp; path = converter/convertRoutine.cpp; sourceTree = "<group>"; };
+		6207694F1CE1CC070008560B /* convertRoutine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = convertRoutine.hpp; path = converter/convertRoutine.hpp; sourceTree = "<group>"; };
+		620769501CE1CC070008560B /* filterGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = filterGL.cpp; path = converter/filterGL.cpp; sourceTree = "<group>"; };
+		620769511CE1CC070008560B /* filterGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = filterGL.h; path = converter/filterGL.h; sourceTree = "<group>"; };
+		620769531CE1CC070008560B /* modelHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = modelHandler.cpp; path = converter/modelHandler.cpp; sourceTree = "<group>"; };
+		620769541CE1CC070008560B /* modelHandler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = modelHandler.hpp; path = converter/modelHandler.hpp; sourceTree = "<group>"; };
+		620769551CE1CC070008560B /* modelHandlerFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = modelHandlerFilter.cpp; path = converter/modelHandlerFilter.cpp; sourceTree = "<group>"; };
+		620769561CE1CC070008560B /* modelHandlerFilterGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = modelHandlerFilterGL.cpp; path = converter/modelHandlerFilterGL.cpp; sourceTree = "<group>"; };
+		6207695E1CE1CC3C0008560B /* picojson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = picojson.h; sourceTree = "<group>"; };
+		620769601CE1CC3C0008560B /* Arg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arg.h; sourceTree = "<group>"; };
+		620769611CE1CC3C0008560B /* ArgException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArgException.h; sourceTree = "<group>"; };
+		620769621CE1CC3C0008560B /* ArgTraits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArgTraits.h; sourceTree = "<group>"; };
+		620769631CE1CC3C0008560B /* CmdLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmdLine.h; sourceTree = "<group>"; };
+		620769641CE1CC3C0008560B /* CmdLineInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmdLineInterface.h; sourceTree = "<group>"; };
+		620769651CE1CC3C0008560B /* CmdLineOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmdLineOutput.h; sourceTree = "<group>"; };
+		620769661CE1CC3C0008560B /* Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constraint.h; sourceTree = "<group>"; };
+		620769671CE1CC3C0008560B /* DocBookOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocBookOutput.h; sourceTree = "<group>"; };
+		620769681CE1CC3C0008560B /* HelpVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpVisitor.h; sourceTree = "<group>"; };
+		620769691CE1CC3C0008560B /* IgnoreRestVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IgnoreRestVisitor.h; sourceTree = "<group>"; };
+		6207696A1CE1CC3C0008560B /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		6207696B1CE1CC3C0008560B /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		6207696C1CE1CC3C0008560B /* MultiArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiArg.h; sourceTree = "<group>"; };
+		6207696D1CE1CC3C0008560B /* MultiSwitchArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSwitchArg.h; sourceTree = "<group>"; };
+		6207696E1CE1CC3C0008560B /* OptionalUnlabeledTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionalUnlabeledTracker.h; sourceTree = "<group>"; };
+		6207696F1CE1CC3C0008560B /* StandardTraits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardTraits.h; sourceTree = "<group>"; };
+		620769701CE1CC3C0008560B /* StdOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StdOutput.h; sourceTree = "<group>"; };
+		620769711CE1CC3C0008560B /* SwitchArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchArg.h; sourceTree = "<group>"; };
+		620769721CE1CC3C0008560B /* UnlabeledMultiArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnlabeledMultiArg.h; sourceTree = "<group>"; };
+		620769731CE1CC3C0008560B /* UnlabeledValueArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnlabeledValueArg.h; sourceTree = "<group>"; };
+		620769741CE1CC3C0008560B /* ValueArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueArg.h; sourceTree = "<group>"; };
+		620769751CE1CC3C0008560B /* ValuesConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValuesConstraint.h; sourceTree = "<group>"; };
+		620769761CE1CC3C0008560B /* VersionVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionVisitor.h; sourceTree = "<group>"; };
+		620769771CE1CC3C0008560B /* Visitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Visitor.h; sourceTree = "<group>"; };
+		620769781CE1CC3C0008560B /* XorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XorHandler.h; sourceTree = "<group>"; };
+		620769791CE1CC3C0008560B /* ZshCompletionOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZshCompletionOutput.h; sourceTree = "<group>"; };
+		6207697D1CE1CD310008560B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = UserInterface/AppDelegate.swift; sourceTree = "<group>"; };
+		620769831CE1CD310008560B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = UserInterface/ViewController.swift; sourceTree = "<group>"; };
+		6207698A1CE1CDC00008560B /* waifu2xOsx-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "waifu2xOsx-Bridging-Header.h"; path = "converter/waifu2xOsx-Bridging-Header.h"; sourceTree = "<group>"; };
+		6207698D1CE1CE1B0008560B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6207698F1CE1CE1B0008560B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		620769901CE1CE1B0008560B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		621A74E71CE6F25D00D6E027 /* MainScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScrollView.swift; path = UserInterface/MainScrollView.swift; sourceTree = "<group>"; };
+		621A74E91CE6FD5400D6E027 /* x1ImageLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = x1ImageLayer.swift; path = UserInterface/x1ImageLayer.swift; sourceTree = "<group>"; };
+		621A74EB1CE701C100D6E027 /* x2ImageLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = x2ImageLayer.swift; path = UserInterface/x2ImageLayer.swift; sourceTree = "<group>"; };
+		623FA3361CE1E94D00744291 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = converter/main.cpp; sourceTree = "<group>"; };
+		623FA33C1CE1EBAB00744291 /* BridgingConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingConverter.h; sourceTree = "<group>"; };
+		623FA33F1CE1EF4A00744291 /* BridgingConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BridgingConverter.mm; sourceTree = "<group>"; };
+		623FA3421CE1F77600744291 /* noise1_model.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = noise1_model.bin; sourceTree = "<group>"; };
+		623FA3431CE1F77600744291 /* noise2_model.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = noise2_model.bin; sourceTree = "<group>"; };
+		623FA3441CE1F77600744291 /* scale2.0x_model.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = scale2.0x_model.bin; sourceTree = "<group>"; };
+		623FA3461CE1F77600744291 /* convolve_fs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = convolve_fs.glsl; sourceTree = "<group>"; };
+		623FA3471CE1F77600744291 /* convolve_vs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = convolve_vs.glsl; sourceTree = "<group>"; };
+		623FA3481CE1F77600744291 /* leaky_relu_fs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = leaky_relu_fs.glsl; sourceTree = "<group>"; };
+		623FA3491CE1F77600744291 /* leaky_relu_vs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = leaky_relu_vs.glsl; sourceTree = "<group>"; };
+		623FA34A1CE1F77600744291 /* waifu2x_fs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = waifu2x_fs.glsl; sourceTree = "<group>"; };
+		623FA34B1CE1F77600744291 /* waifu2x_vs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = waifu2x_vs.glsl; sourceTree = "<group>"; };
+		62CBF6C61CE1C8B0006BE257 /* waifu2xOsx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = waifu2xOsx.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62CBF7451CE1C909006BE257 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		62CBF7471CE1C911006BE257 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		62CBF7491CE1C919006BE257 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		62CBF74B1CE1C923006BE257 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		62CBF74D1CE1C92C006BE257 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		62CBF74F1CE1C935006BE257 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		62CBF7511CE1C93F006BE257 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62CBF6C31CE1C8B0006BE257 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62CBF7521CE1C93F006BE257 /* OpenGL.framework in Frameworks */,
+				620769491CE1CAC40008560B /* libopencv_imgcodecs.dylib in Frameworks */,
+				62CBF7501CE1C935006BE257 /* CoreGraphics.framework in Frameworks */,
+				6207694B1CE1CAC40008560B /* libopencv_highgui.dylib in Frameworks */,
+				62CBF74E1CE1C92C006BE257 /* CoreFoundation.framework in Frameworks */,
+				620769481CE1CAC40008560B /* libopencv_imgproc.dylib in Frameworks */,
+				62CBF74C1CE1C923006BE257 /* CoreVideo.framework in Frameworks */,
+				6207694A1CE1CAC40008560B /* libopencv_core.dylib in Frameworks */,
+				62CBF74A1CE1C919006BE257 /* ApplicationServices.framework in Frameworks */,
+				62CBF7481CE1C911006BE257 /* Cocoa.framework in Frameworks */,
+				62CBF7461CE1C909006BE257 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6207694C1CE1CB760008560B /* converter-glsl */ = {
+			isa = PBXGroup;
+			children = (
+				6207698A1CE1CDC00008560B /* waifu2xOsx-Bridging-Header.h */,
+				6207695D1CE1CC3C0008560B /* include */,
+				6207694E1CE1CC070008560B /* convertRoutine.cpp */,
+				6207694F1CE1CC070008560B /* convertRoutine.hpp */,
+				620769501CE1CC070008560B /* filterGL.cpp */,
+				620769511CE1CC070008560B /* filterGL.h */,
+				620769531CE1CC070008560B /* modelHandler.cpp */,
+				620769541CE1CC070008560B /* modelHandler.hpp */,
+				620769551CE1CC070008560B /* modelHandlerFilter.cpp */,
+				620769561CE1CC070008560B /* modelHandlerFilterGL.cpp */,
+				623FA3361CE1E94D00744291 /* main.cpp */,
+			);
+			name = "converter-glsl";
+			sourceTree = "<group>";
+		};
+		6207695D1CE1CC3C0008560B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				6207695E1CE1CC3C0008560B /* picojson.h */,
+				6207695F1CE1CC3C0008560B /* tclap */,
+			);
+			name = include;
+			path = converter/include;
+			sourceTree = "<group>";
+		};
+		6207695F1CE1CC3C0008560B /* tclap */ = {
+			isa = PBXGroup;
+			children = (
+				620769601CE1CC3C0008560B /* Arg.h */,
+				620769611CE1CC3C0008560B /* ArgException.h */,
+				620769621CE1CC3C0008560B /* ArgTraits.h */,
+				620769631CE1CC3C0008560B /* CmdLine.h */,
+				620769641CE1CC3C0008560B /* CmdLineInterface.h */,
+				620769651CE1CC3C0008560B /* CmdLineOutput.h */,
+				620769661CE1CC3C0008560B /* Constraint.h */,
+				620769671CE1CC3C0008560B /* DocBookOutput.h */,
+				620769681CE1CC3C0008560B /* HelpVisitor.h */,
+				620769691CE1CC3C0008560B /* IgnoreRestVisitor.h */,
+				6207696A1CE1CC3C0008560B /* Makefile.am */,
+				6207696B1CE1CC3C0008560B /* Makefile.in */,
+				6207696C1CE1CC3C0008560B /* MultiArg.h */,
+				6207696D1CE1CC3C0008560B /* MultiSwitchArg.h */,
+				6207696E1CE1CC3C0008560B /* OptionalUnlabeledTracker.h */,
+				6207696F1CE1CC3C0008560B /* StandardTraits.h */,
+				620769701CE1CC3C0008560B /* StdOutput.h */,
+				620769711CE1CC3C0008560B /* SwitchArg.h */,
+				620769721CE1CC3C0008560B /* UnlabeledMultiArg.h */,
+				620769731CE1CC3C0008560B /* UnlabeledValueArg.h */,
+				620769741CE1CC3C0008560B /* ValueArg.h */,
+				620769751CE1CC3C0008560B /* ValuesConstraint.h */,
+				620769761CE1CC3C0008560B /* VersionVisitor.h */,
+				620769771CE1CC3C0008560B /* Visitor.h */,
+				620769781CE1CC3C0008560B /* XorHandler.h */,
+				620769791CE1CC3C0008560B /* ZshCompletionOutput.h */,
+			);
+			path = tclap;
+			sourceTree = "<group>";
+		};
+		6207697C1CE1CC8B0008560B /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				621A74E71CE6F25D00D6E027 /* MainScrollView.swift */,
+				6207697D1CE1CD310008560B /* AppDelegate.swift */,
+				620769831CE1CD310008560B /* ViewController.swift */,
+				621A74E91CE6FD5400D6E027 /* x1ImageLayer.swift */,
+				621A74EB1CE701C100D6E027 /* x2ImageLayer.swift */,
+			);
+			name = UserInterface;
+			sourceTree = "<group>";
+		};
+		6207698C1CE1CE1B0008560B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				623FA3411CE1F77600744291 /* models */,
+				623FA3451CE1F77600744291 /* shaders */,
+				6207698D1CE1CE1B0008560B /* Assets.xcassets */,
+				6207698E1CE1CE1B0008560B /* Main.storyboard */,
+				620769901CE1CE1B0008560B /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		623FA3391CE1EAD400744291 /* Bridging-Converter */ = {
+			isa = PBXGroup;
+			children = (
+				623FA33F1CE1EF4A00744291 /* BridgingConverter.mm */,
+				623FA33C1CE1EBAB00744291 /* BridgingConverter.h */,
+			);
+			name = "Bridging-Converter";
+			sourceTree = "<group>";
+		};
+		623FA3411CE1F77600744291 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				623FA3421CE1F77600744291 /* noise1_model.bin */,
+				623FA3431CE1F77600744291 /* noise2_model.bin */,
+				623FA3441CE1F77600744291 /* scale2.0x_model.bin */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		623FA3451CE1F77600744291 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				623FA3461CE1F77600744291 /* convolve_fs.glsl */,
+				623FA3471CE1F77600744291 /* convolve_vs.glsl */,
+				623FA3481CE1F77600744291 /* leaky_relu_fs.glsl */,
+				623FA3491CE1F77600744291 /* leaky_relu_vs.glsl */,
+				623FA34A1CE1F77600744291 /* waifu2x_fs.glsl */,
+				623FA34B1CE1F77600744291 /* waifu2x_vs.glsl */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
+		62CBF6BD1CE1C8B0006BE257 = {
+			isa = PBXGroup;
+			children = (
+				62CBF6F41CE1C8D4006BE257 /* Frameworks */,
+				62CBF6C81CE1C8B0006BE257 /* waifu2xOsx */,
+				62CBF6C71CE1C8B0006BE257 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		62CBF6C71CE1C8B0006BE257 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62CBF6C61CE1C8B0006BE257 /* waifu2xOsx.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62CBF6C81CE1C8B0006BE257 /* waifu2xOsx */ = {
+			isa = PBXGroup;
+			children = (
+				623FA3391CE1EAD400744291 /* Bridging-Converter */,
+				6207698C1CE1CE1B0008560B /* Resource */,
+				6207697C1CE1CC8B0008560B /* UserInterface */,
+				6207694C1CE1CB760008560B /* converter-glsl */,
+			);
+			path = waifu2xOsx;
+			sourceTree = "<group>";
+		};
+		62CBF6F41CE1C8D4006BE257 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				620769441CE1CAC40008560B /* libopencv_imgproc.dylib */,
+				620769451CE1CAC40008560B /* libopencv_imgcodecs.dylib */,
+				620769461CE1CAC40008560B /* libopencv_core.dylib */,
+				620769471CE1CAC40008560B /* libopencv_highgui.dylib */,
+				62CBF7511CE1C93F006BE257 /* OpenGL.framework */,
+				62CBF74F1CE1C935006BE257 /* CoreGraphics.framework */,
+				62CBF74D1CE1C92C006BE257 /* CoreFoundation.framework */,
+				62CBF74B1CE1C923006BE257 /* CoreVideo.framework */,
+				62CBF7491CE1C919006BE257 /* ApplicationServices.framework */,
+				62CBF7471CE1C911006BE257 /* Cocoa.framework */,
+				62CBF7451CE1C909006BE257 /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62CBF6C51CE1C8B0006BE257 /* waifu2xOsx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62CBF6EB1CE1C8B1006BE257 /* Build configuration list for PBXNativeTarget "waifu2xOsx" */;
+			buildPhases = (
+				62CBF6C21CE1C8B0006BE257 /* Sources */,
+				62CBF6C31CE1C8B0006BE257 /* Frameworks */,
+				62CBF6C41CE1C8B0006BE257 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = waifu2xOsx;
+			productName = waifu2xOsx;
+			productReference = 62CBF6C61CE1C8B0006BE257 /* waifu2xOsx.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62CBF6BE1CE1C8B0006BE257 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Yasumasa Sewake";
+				TargetAttributes = {
+					62CBF6C51CE1C8B0006BE257 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 62CBF6C11CE1C8B0006BE257 /* Build configuration list for PBXProject "waifu2xOsx" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62CBF6BD1CE1C8B0006BE257;
+			productRefGroup = 62CBF6C71CE1C8B0006BE257 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62CBF6C51CE1C8B0006BE257 /* waifu2xOsx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62CBF6C41CE1C8B0006BE257 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				620769941CE1CE910008560B /* Assets.xcassets in Resources */,
+				623FA34D1CE1F77600744291 /* noise2_model.bin in Resources */,
+				623FA3501CE1F77600744291 /* convolve_vs.glsl in Resources */,
+				623FA34C1CE1F77600744291 /* noise1_model.bin in Resources */,
+				620769951CE1CE910008560B /* Main.storyboard in Resources */,
+				623FA3521CE1F77600744291 /* leaky_relu_vs.glsl in Resources */,
+				623FA3511CE1F77600744291 /* leaky_relu_fs.glsl in Resources */,
+				623FA34F1CE1F77600744291 /* convolve_fs.glsl in Resources */,
+				623FA3531CE1F77600744291 /* waifu2x_fs.glsl in Resources */,
+				623FA3541CE1F77600744291 /* waifu2x_vs.glsl in Resources */,
+				620769961CE1CE910008560B /* Info.plist in Resources */,
+				623FA34E1CE1F77600744291 /* scale2.0x_model.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62CBF6C21CE1C8B0006BE257 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				621A74EA1CE6FD5400D6E027 /* x1ImageLayer.swift in Sources */,
+				620769851CE1CD310008560B /* AppDelegate.swift in Sources */,
+				6207695C1CE1CC070008560B /* modelHandlerFilterGL.cpp in Sources */,
+				6207695B1CE1CC070008560B /* modelHandlerFilter.cpp in Sources */,
+				620769571CE1CC070008560B /* convertRoutine.cpp in Sources */,
+				620769891CE1CD310008560B /* ViewController.swift in Sources */,
+				623FA3401CE1EF4A00744291 /* BridgingConverter.mm in Sources */,
+				6207695A1CE1CC070008560B /* modelHandler.cpp in Sources */,
+				623FA3371CE1E94D00744291 /* main.cpp in Sources */,
+				621A74E81CE6F25D00D6E027 /* MainScrollView.swift in Sources */,
+				620769581CE1CC070008560B /* filterGL.cpp in Sources */,
+				621A74EC1CE701C100D6E027 /* x2ImageLayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6207698E1CE1CE1B0008560B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6207698F1CE1CE1B0008560B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		62CBF6E91CE1C8B1006BE257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		62CBF6EA1CE1C8B1006BE257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		62CBF6EC1CE1C8B1006BE257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv3/3.1.0_3/include,
+					/usr/local/include,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/waifu2xOsx/Resource/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/opencv3/3.1.0_3/lib,
+					/usr/local/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_LDFLAGS = "-lglfw3";
+				PRODUCT_BUNDLE_IDENTIFIER = waifu2x.waifu2xOsx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "waifu2xOsx/converter/waifu2xOsx-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		62CBF6ED1CE1C8B1006BE257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv3/3.1.0_3/include,
+					/usr/local/include,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/waifu2xOsx/Resource/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/opencv3/3.1.0_3/lib,
+					/usr/local/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_LDFLAGS = "-lglfw3";
+				PRODUCT_BUNDLE_IDENTIFIER = waifu2x.waifu2xOsx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "waifu2xOsx/converter/waifu2xOsx-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62CBF6C11CE1C8B0006BE257 /* Build configuration list for PBXProject "waifu2xOsx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62CBF6E91CE1C8B1006BE257 /* Debug */,
+				62CBF6EA1CE1C8B1006BE257 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62CBF6EB1CE1C8B1006BE257 /* Build configuration list for PBXNativeTarget "waifu2xOsx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62CBF6EC1CE1C8B1006BE257 /* Debug */,
+				62CBF6ED1CE1C8B1006BE257 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62CBF6BE1CE1C8B0006BE257 /* Project object */;
+}
